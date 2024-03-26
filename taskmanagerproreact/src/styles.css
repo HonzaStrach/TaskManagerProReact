@@ -1,0 +1,91 @@
+/* Mobile First Approach */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.task-list {
+    margin-bottom: 20px;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select,
+.task-form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.task-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.task {
+    flex: 1 0 calc(33.33% - 20px); /* Three tasks in a row with some spacing */
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+    .task h3 {
+        margin-top: 0;
+    }
+
+    .task.low {
+        background-color: #d9f9d9; /* Light green */
+    }
+
+    .task.medium {
+        background-color: #fff7cc; /* Light yellow */
+    }
+
+    .task.high {
+        background-color: #ffd6cc; /* Light red */
+    }
+
+    .task.completed {
+        background-color: #f4f4f4; /* Light gray */
+        color: #666; /* Gray text color */
+    }
+
+/* Media query for tablet and desktop displays */
+@media (max-width: 1024px) {
+    .task {
+        flex: 1 0 calc(50% - 20px); /* Two tasks in a row with some spacing */
+    }
+}
+
+/* Media query for mobile phone displays */
+@media (max-width: 768px) {
+    .task {
+        flex: 1 0 calc(100% - 20px); /* One task per row with some spacing */
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
